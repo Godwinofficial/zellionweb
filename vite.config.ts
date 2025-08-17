@@ -1,12 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-// Removed lovable-tagger
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/zellionweb/", // 👈 must be here, not inside server
   server: {
-    base: "/zellionweb/",
     host: "::",
     port: 8080,
   },
